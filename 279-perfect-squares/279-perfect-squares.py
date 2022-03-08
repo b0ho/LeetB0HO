@@ -12,16 +12,16 @@ class Solution:
             # (자기 자신 - 제곱수*제곱수)가 제곱수인 경우
             # 이 경우 자기 자신 + 제곱수 = 2가 최소
             # 필요한 정답은 정수를 이루는 최소 제곱수의 개수
-            if is_square(n - i**2):
+            if is_square(n - i*i):
                 return 2
             
         for i in range(int(n**0.5) + 1):
             for j in range(int(n**0.5) + 1):
                 # 제곱수 확인은 양의 정수만 필요
-                if (n - i**2 - j**2) < 0:
+                if (n - i*i - j*j) < 0:
                     break
                 # 제곱수 3개가 가능한 경우 탐색
-                elif is_square(n - i**2 - j**2):
+                elif is_square(n - i*i - j*j):
                     return 3
                 
         # [그랑주 네 제곱수 정리]
