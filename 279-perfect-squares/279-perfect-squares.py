@@ -16,11 +16,14 @@ class Solution:
                 return 2
             
         for i in range(n + 1):
+            # 제곱수 확인은 양의 정수만 필요
+            # 이를 초과하는 경우는 이미 i가 초과 된 경우로
+            # for문 시간 낭비임
             if (n -  i*i) < 0:
                 break
             for j in range(n + 1):
                 # 제곱수 확인은 양의 정수만 필요
-                # 이를 초과하는 경우는 이미 i, 특히 j가 초과 된 경우로
+                # 이를 초과하는 경우는 이미 j가 초과 된 경우로
                 # for문 시간 낭비임
                 if (n - i*i - j*j) < 0:
                     break
