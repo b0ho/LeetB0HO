@@ -15,7 +15,7 @@ class Solution:
             if is_square(n - i*i):
                 return 2
             
-        for i in range(int(n**0.5) + 1):
+        for i in range(n + 1):
             for j in range(n + 1):
                 # 제곱수 확인은 양의 정수만 필요
                 if (n - i*i - j*j) < 0:
